@@ -1,0 +1,51 @@
+{% extends "administrateur/base-admin.html" %}
+{% load static %}
+{% block titre %} Admin{% endblock titre %}
+{% block Sous-titre %} Liste des demandes validées{% endblock Sous-titre %}
+{% block corps %}
+
+    <div class="container card shadow mb-4 col-12 col-md-12 px-2">
+        <div class="card-body">
+            <div class="card-header bg-info" align="center" >Liste des demandes validées</div>
+            {% if messages %} 
+                <p class="alert alert-info">{{ messages }}</p>
+            {% endif %}
+            <div class="pt-2 "  style="overflow-y:scroll; height:500px;">       
+                <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Image</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Prix</th>
+                        <th scope="col">Quatité</th>
+                        <th scope="col">Prix Total</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Nom Client</th>
+                        <th scope="col">Info Clients</th>
+                      </tr>
+                    </thead>
+                {% if demandesV %}
+                    <tbody>
+                    {% for demandesV in demandesV %}
+                      <tr>
+                        <th width="100em"><a href={{demandesV.produits.image.url}}><img src={{demandesV.produits.image.url}}/></a></th>
+                        <td>{{demandesV.produits.nom}}</td>
+                        <td>{{demandesV.produits.prix}}</td>
+                        <td>{{demandesV.qte}}</td>
+                        <td>{{demandesV.PrixT}}</td>
+                        <td>{{demandesV.position}}</td>
+                        <td>{{demandesV.clients.nom}}<br> {{demandesV.clients.prénom}}</td>
+                        <td>{{demandesV.clients.mail}}<br> {{demandesV.clients.tel}}</td>
+                        <td><a href="#" class="btn btn-sm bg-danger text-light">Supprimer</a></td>
+                      </tr>
+                      {% endfor %}
+                {% else %}
+                    <p class=" box-shadow border-radius-10 text-center bg-warning ">Aucune demande ... Merci !</p>
+                {% endif %}
+                    </tbody>
+                  </table>
+        </div>
+        </div> 
+    </div>
+
+{% endblock corps %}

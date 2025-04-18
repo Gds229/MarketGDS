@@ -1,0 +1,52 @@
+{% extends "administrateur/base-admin.html" %}
+{% load static %}
+{% block titre %} Admin{% endblock titre %}
+{% block Sous-titre %} Gerer clients{% endblock Sous-titre %}
+{% block corps %}
+
+    <div class="container card shadow mb-4 col-12 col-md-12 px-2">
+        <div class="card-body">
+            <div class="card-header bg-info" align="center" >la liste des clients</div>
+            {% if messages %} 
+                <p class="alert alert-info">{{ messages }}</p>
+            {% endif %}
+            <div class="pt-2 "  style="overflow-y:scroll; height:500px;">       
+                <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Image</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Prénom</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Mail</th>
+                        <th scope="col">Téléphone</th>
+                        <th scope="col">Sexe</th>
+                        <th scope="col">Statut</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                {% if clients %}
+                    <tbody>
+                    {% for clients in clients %}
+                      <tr>
+                        <th width="100em"><a href={{clients.image.url}}><img src={{clients.image.url}}/></a></th>
+                        <td>{{clients.nom}}</td>
+                        <td>{{clients.prénom}}</td>
+                        <td>{{clients.username}}</td>
+                        <td>{{clients.mail}}</td>
+                        <td>{{clients.tel}}</td>
+                        <td>{{clients.sexe}}</td>
+                        <td>{{clients.statut}}</td>
+                        <td><a href="#" class="btn btn-sm bg-danger text-light">Supprimer</a></td>
+                      </tr>
+                      {% endfor %}
+                {% else %}
+                    <p class=" box-shadow border-radius-10 text-center bg-warning ">Aucun Client ... Merci !</p>
+                {% endif %}
+                    </tbody>
+                  </table>
+        </div>
+        </div> 
+    </div>
+
+{% endblock corps %}

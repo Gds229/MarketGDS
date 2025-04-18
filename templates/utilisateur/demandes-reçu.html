@@ -1,0 +1,21 @@
+{% extends "utilisateur/base.html" %}
+{% load static %}
+{% block titre %} Demandes validé{% endblock titre %}
+{% block Sous-titre %}Demandes réçu{% endblock Sous-titre %}
+{% block Sous-titre2 %}{% endblock Sous-titre2 %}
+{% block bar-recherche %}
+	<div class="col-6 col-md-6 row d-flex flex-row-reverse">
+		<div class="fa fa-search search-toggle-icon" data-toggle="header_search"></div>
+		<div class="header-search">
+			<form>
+				<div class="form-group mb-0">
+					<input type="text" class="form-control search-input col-12 col-md-12" placeholder="Recherchez ici">
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock bar-recherche %}
+{% block corps %}
+
+
+{% endblock corps %}

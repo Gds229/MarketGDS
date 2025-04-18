@@ -1,0 +1,169 @@
+{% extends "utilisateur/base.html" %}
+{% load static %}
+{% block titre %} Nos produits{% endblock titre %}
+{% block Sous-titre %}Nos Produits{% endblock Sous-titre %}
+{% block Sous-titre2 %}{% endblock Sous-titre2 %}
+{% block bar-recherche %}
+	<div class="col-6 col-md-6 row d-flex flex-row-reverse">
+		<div class="fa fa-search search-toggle-icon" data-toggle="header_search"></div>
+		<div class="header-search">
+			<form>
+				<div class="form-group mb-0">
+					<input type="text" class="form-control search-input col-12 col-md-12" placeholder="Recherchez ici">
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock bar-recherche %}
+{% block corps %}
+	<div class="gallery-wrap">
+		<ul class="row">
+			
+			<li class="col-lg-4 col-md-6 col-sm-12">
+				<div class="da-card box-shadow">
+					<div class="da-card-photo">
+						<img src={% static "vendors/images/product-1.jpg" %} alt="">
+						<div class="da-overlay">
+							<div class="da-social">
+							<h5 class="mb-10 color-white pd-20">Lorem ipsum dolor sit amet, consectetur adipisicing.</h5>
+								<ul class="clearfix">
+									<li><a value="Voir" href={% static "vendors/images/product-1.jpg" %} data-fancybox="images"><i class="fa fa-picture-o"></i></a></li>
+									<li><a value="Commande" href={% url "commandeProduits" %}><i class="fa fa-link"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="col-lg-4 col-md-6 col-sm-12">
+				<div class="da-card box-shadow">
+					<div class="da-card-photo">
+						<img src={% static "vendors/images/product-2.jpg" %} alt="">
+						<div class="da-overlay">
+							<div class="da-social">
+							<h5 class="mb-10 color-white pd-20">Lorem ipsum dolor sit amet, consectetur adipisicing.</h5>
+								<ul class="clearfix">
+									<li><a value="Voir" href={% static "vendors/images/product-2.jpg" %} data-fancybox="images"><i class="fa fa-picture-o"></i></a></li>
+									<li><a value="Commande" href="#"><i class="fa fa-link"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="col-lg-4 col-md-6 col-sm-12">
+				<div class="da-card box-shadow">
+					<div class="da-card-photo">
+						<img src={% static "vendors/images/product-3.jpg" %} alt="">
+						<div class="da-overlay">
+							<div class="da-social">
+							<h5 class="mb-10 color-white pd-20">Lorem ipsum dolor sit amet, consectetur adipisicing.</h5>
+								<ul class="clearfix">
+									<li><a value="Voir" href={% static "vendors/images/product-3.jpg" %} data-fancybox="images"><i class="fa fa-picture-o"></i></a></li>
+									<li><a value="Commande" href="#"><i class="fa fa-link"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="col-lg-4 col-md-6 col-sm-12">
+				<div class="da-card box-shadow">
+					<div class="da-card-photo">
+						<img src={% static "vendors/images/app-1.jpg" %} alt="">
+						<div class="da-overlay">
+							<div class="da-social">
+							<h5 class="mb-10 color-white pd-20">Lorem ipsum dolor sit amet, consectetur adipisicing.</h5>
+								<ul class="clearfix">
+									<li><a value="Voir" href={% static "vendors/images/app-1.jpg" %} data-fancybox="images"><i class="fa fa-picture-o"></i></a></li>
+									<li><a value="Commande" href="#"><i class="fa fa-link"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="col-lg-4 col-md-6 col-sm-12">
+				<div class="da-card box-shadow">
+					<div class="da-card-photo">
+						<img src={% static "vendors/images/app-2.jpg" %} alt="">
+						<div class="da-overlay">
+							<div class="da-social">
+							<h5 class="mb-10 color-white pd-20">Lorem ipsum dolor sit amet, consectetur adipisicing.</h5>
+								<ul class="clearfix">
+									<li><a value="Voir" href={% static "vendors/images/app-2.jpg" %} data-fancybox="images"><i class="fa fa-picture-o"></i></a></li>
+									<li><a value="Commande" href="#"><i class="fa fa-link"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="col-lg-4 col-md-6 col-sm-12">
+				<div class="da-card box-shadow">
+					<div class="da-card-photo">
+						<img src={% static "vendors/images/app-3.jpg" %} alt="">
+						<div class="da-overlay">
+							<div class="da-social">
+							<h5 class="mb-10 color-white pd-20">Lorem ipsum dolor sit amet, consectetur adipisicing.</h5>
+								<ul class="clearfix">
+									<li><a value="Voir" href={% static "vendors/images/app-3.jpg" %} data-fancybox="images"><i class="fa fa-picture-o"></i></a></li>
+									<li><a value="Commande" href="#"><i class="fa fa-link"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="col-lg-4 col-md-6 col-sm-12">
+				<div class="da-card box-shadow">
+					<div class="da-card-photo">
+						<img src={% static "vendors/images/branding-1.jpg" %} alt="">
+						<div class="da-overlay">
+							<div class="da-social">
+							<h5 class="mb-10 color-white pd-20">Lorem ipsum dolor sit amet, consectetur adipisicing.</h5>
+								<ul class="clearfix">
+									<li><a value="Voir" href={% static "vendors/images/branding-1.jpg" %} data-fancybox="images"><i class="fa fa-picture-o"></i></a></li>
+									<li><a value="Commande" href="#"><i class="fa fa-link"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="col-lg-4 col-md-6 col-sm-12">
+				<div class="da-card box-shadow">
+					<div class="da-card-photo">
+						<img src={% static "vendors/images/branding-2.jpg" %} alt="">
+						<div class="da-overlay">
+							<div class="da-social">
+							<h5 class="mb-10 color-white pd-20">Lorem ipsum dolor sit amet, consectetur adipisicing.</h5>
+								<ul class="clearfix">
+									<li><a value="Voir" href={% static "vendors/images/branding-2.jpg" %} data-fancybox="images"><i class="fa fa-picture-o"></i></a></li>
+									<li><a value="Commande" href="#"><i class="fa fa-link"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="col-lg-4 col-md-6 col-sm-12">
+				<div class="da-card box-shadow">
+					<div class="da-card-photo">
+						<img src={% static "vendors/images/branding-3.jpg" %} alt="">
+						<div class="da-overlay">
+							<div class="da-social">
+							<h5 class="mb-10 color-white pd-20">Lorem ipsum dolor sit amet, consectetur adipisicing.</h5>
+								<ul class="clearfix">
+									<li><a value="Voir" href={% static "vendors/images/branding-3.jpg" %} data-fancybox="images"><i class="fa fa-picture-o"></i></a></li>
+									<li><a  value="Commande" href="#"><i class="fa fa-link"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+{% endblock corps %}
+
